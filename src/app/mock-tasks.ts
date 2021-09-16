@@ -1,6 +1,6 @@
 // fake database or api
 interface Task  {
-    id: number,
+    id?: number,
     text: string,
     day: string,
     reminder: Boolean
