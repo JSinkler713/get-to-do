@@ -1,5 +1,5 @@
 // fake database or api
-interface Task  {
+export interface Task  {
     id?: number,
     text: string,
     day: string,
