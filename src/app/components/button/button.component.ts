@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 // Input looks for props passed into app-button from parent
 
 @Component({
@@ -10,6 +10,8 @@ export class ButtonComponent implements OnInit {
   //using Input to have access to the props
   @Input() text: string | undefined;
   @Input() color: string | undefined;
+  //using Output for eventEmitter
+  @Output() btnClick = new EventEmitter()
 
   constructor() { }
 
@@ -17,7 +19,8 @@ export class ButtonComponent implements OnInit {
   }
   //add in events
   onClick() {
-    console.log('add')
+    // console.log('add')
+    this.btnClick.emit()
   }
 
 
