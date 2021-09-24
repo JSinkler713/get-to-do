@@ -24,5 +24,16 @@ export class TasksComponent implements OnInit {
     // updates backend, use filter to update frontend as well
     this.taskService.deleteTask(task).subscribe(()=> this.tasks = this.tasks.filter((t)=> t.id !== task.id))
   }
+  toggleTask(task: Task) {
+    console.log('toggleing the reminder for this task')
+    console.log(task)
+
+    // change on the frontend
+    task.reminder = !task.reminder
+
+    this.taskService.updateTaskReminder(task).subscribe()
+    // updates backend, use filter to update frontend as well
+    // this.taskService.deleteTask(task).subscribe(()=> this.tasks = this.tasks.filter((t)=> t.id !== task.id))
+  }
 
 }

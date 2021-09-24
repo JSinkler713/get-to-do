@@ -5,6 +5,12 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { of, Observable } from 'rxjs'
 import { TASKS, Task } from '../mock-tasks';
 
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type': 'application/json'
+  })
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -27,5 +33,10 @@ export class TaskService {
     //this.http.delete(id)
     const url = `${this.apiUrl}/${task.id}`
     return this.http.delete<Task>(url)
+  }
+  updateTaskReminder(task: Task): Observable<Task> {
+    const url = `${this.apiUrl}/${task.id}`
+    return this.http.put<Task>(url, task, httpOptions)
+
   }
 }
