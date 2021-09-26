@@ -39,7 +39,9 @@ export class TasksComponent implements OnInit {
     console.log('going to add a task from parent')
     // change on frontend
     // update backend with a taskService
-    this.taskService.addTask(task).subscribe()
+    this.taskService.addTask(task).subscribe((task)=> {
+      this.tasks.push(task)
+    })
   }
 
 }
