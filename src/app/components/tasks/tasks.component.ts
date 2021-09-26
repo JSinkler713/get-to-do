@@ -35,5 +35,11 @@ export class TasksComponent implements OnInit {
     // updates backend, use filter to update frontend as well
     // this.taskService.deleteTask(task).subscribe(()=> this.tasks = this.tasks.filter((t)=> t.id !== task.id))
   }
+  addTask(task: Task) {
+    console.log('going to add a task from parent')
+    // change on frontend
+    // update backend with a taskService
+    this.taskService.addTask(task).subscribe()
+  }
 
 }
