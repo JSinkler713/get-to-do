@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {HttpClientModule} from '@angular/common/http'
-import {FormsModule} from '@angular/forms'
+import { HttpClientModule } from '@angular/common/http'
+import { FormsModule } from '@angular/forms'
 import { RouterModule, Routes } from '@angular/router'
 
 
@@ -16,9 +16,10 @@ import { AboutComponent } from './components/about/about.component';
 import { FooterComponent } from './components/footer/footer.component';
 
 const appRoutes: Routes = [
+  // as many routes as you want
+  // brought in in app.component.html
   {path: '', component: TasksComponent },
   {path: 'about', component: AboutComponent }
-
 ]
 
 @NgModule({

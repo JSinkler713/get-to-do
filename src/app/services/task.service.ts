@@ -22,9 +22,6 @@ export class TaskService {
 
   // our service method to get TASKS
   getTasks(): Observable<Task[]> {
-    //const tasks = of(TASKS)
-    //return tasks
-
     // using the server
     return this.http.get<Task[]>(this.apiUrl)
   }
