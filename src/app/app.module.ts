@@ -8,6 +8,7 @@ import { ButtonComponent } from './components/button/button.component';
 import { TasksComponent } from './components/tasks/tasks.component';
 import { TaskComponent } from './components/task/task.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { AddTaskComponent } from './components/add-task/add-task.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HeaderComponent,
     ButtonComponent,
     TasksComponent,
-    TaskComponent
+    TaskComponent,
+    AddTaskComponent
   ],
   imports: [
     BrowserModule,
